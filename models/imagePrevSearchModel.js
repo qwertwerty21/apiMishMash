@@ -1,12 +1,19 @@
 
 //initialize firebase
 const firebase = require('firebase');
-const config = {
-  apiKey: process.env.FIREBASE_APIKEY,
-  authDomain: process.env.FIREBASE_AUTHDOMAIN,
-  databaseURL: process.env.FIREBASE_DATABASEURL,
-  storageBucket: process.env.STORAGEBUCKET,
-  messagingSenderId: process.env.MESSAGINGSENDERID
+// const config = {
+//   apiKey: process.env.FIREBASE_APIKEY,
+//   authDomain: process.env.FIREBASE_AUTHDOMAIN,
+//   databaseURL: process.env.FIREBASE_DATABASEURL,
+//   storageBucket: process.env.STORAGEBUCKET,
+//   messagingSenderId: process.env.MESSAGINGSENDERID
+// };
+var config = {
+  apiKey: "AIzaSyDbrPQVFdofpoAYR-C9AFoy4gnVARj76mU",
+  authDomain: "apimishmashimagesearch.firebaseapp.com",
+  databaseURL: "https://apimishmashimagesearch.firebaseio.com",
+  storageBucket: "apimishmashimagesearch.appspot.com",
+  messagingSenderId: "351451763645"
 };
 firebase.initializeApp(config);
 let database = firebase.database();
