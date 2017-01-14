@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	.container
+		section.title-row
+			h1 Who Am I ( Request Header Parser ) Microservice
+		section.stories-row
+			h3 User Stories:
+			ol.stories-ul
+				li.stories-li I can get the IP address, language, and operating system for my browser.
+		section.example-sect
+			h3 Example Usage:
+			ul.example-ul
+				li
+					a(href="/api/tellmewhoami") https://localhost:3000/api/tellmewhoami
+			h3 Example Output:
+			ul.output-ul
+				li
+					code { ipAddress: "::1",language: "ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4",operatingSystem: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36" }

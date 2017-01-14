@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	.container
+		section.title-row
+			h1 Timestamp Microservice
+		section.stories-row
+			h3 User Stories:
+			ol.stories-ul
+				li.stories-li I can pass a string as a parameter and it will check to see whether that string contains either a Unix timestamp or a natural language date (e.g. January 1, 2017).
+				li.stories-li If it does, it returns both the Unix timestamp and the natural language form of that date.
+				li.stories-li If it does not contain a date or Unix timestamp, it returns null for those properties.
+		section.example-sect
+			h3 Example Usage:
+			ul.example-ul
+				li https://localhost:3000/api/timestamp/January 1, 2017
+				li https://localhost:3000/api/timestamp/1483257600
+			h3 Example Output:
+			ul.output-ul
+				li
+					code {"unix": 1483257600, "natural": "January 1, 2017"}

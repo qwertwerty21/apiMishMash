@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	.container
+		section.title-row
+			h1 Image Search Abstraction Layer Microservice
+		section.stories-row
+			h3 User Stories:
+			ol.stories-ul
+				li.stories-li I can get the image URLs, thumbnail URLs, type, and size for a set of images relating to a given search string.
+				li.stories-li I can paginate through the responses by adding a ?offset=2 query to the URL.
+				li.stories-li I can get a list of most recently submitted search strings.
+		section.example-sect
+			h3 Make a Search Example Usage:
+			ul.example-ul
+				li localhost:3000/api/imagesearch/cute puppies?offset=2
+			h3 Make a Search Example Output:
+			ul.output-ul
+				li
+					code [{"url":"https://i.ytimg.com/vi/d_rC9c200wg/hqdefault.jpg","thumbnail_url":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSB0lNZkzb0Dn_ySOkkDf_HnHz8hIAouKdcrOQ-OKFLI58w80ipy99Q9Kg","type":"image/jpeg","size":28479}]
+			h3 View Search History Example Usage
+			ul.example-ul
+				li
+					a(href='/api/history/imagesearch') localhost:3000/api/history/imagesearch
+			h3 View Search History Example Output:
+			ul.output-ul
+				li
+					code [{"offset":0,"search_term":"batman","when":"Fri Jan 13 2017 16:17:32 GMT-0800 (PST)"},{"offset":0,"search_term":"cats","when":"Fri Jan 13 2017 16:28:45 GMT-0800 (PST)"},{"offset":0,"search_term":"catman","when":"Fri Jan 13 2017 16:28:46 GMT-0800 (PST)"}]

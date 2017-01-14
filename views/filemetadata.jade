@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	.container
+		section.title-row
+			h1 File Metadata Microservice
+		section.stories-row
+			h3 User Stories:
+			ol.stories-ul
+				li.stories-li I can submit a FormData object that includes a file upload.
+				li.stories-li When I submit something, I will receive the file size in bytes within the JSON response.
+		section.form-sect
+			form(action="../api/filemetadata", method="POST", enctype="multipart/form-data")
+				label(for="fileInput") Upload a file here
+					input#fileInput(type="file", name="fileInput", size="40")
+				input#submitInput(type="submit", value="Submit")
+		section.example-sect
+			h3 Example Output:
+			ul.output-ul
+				li
+					code {"bytes":"243902"}

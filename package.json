@@ -1,0 +1,25 @@
+{
+  "name": "apiMishMash",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "dotenv": "^4.0.0",
+    "express": "~4.13.4",
+    "firebase": "^3.6.5",
+    "google-images": "^2.0.0",
+    "jade": "~1.11.0",
+    "mongodb": "^2.2.20",
+    "mongoose": "^4.7.6",
+    "morgan": "~1.7.0",
+    "multer": "^1.2.1",
+    "node-sass-middleware": "0.8.0",
+    "serve-favicon": "~2.3.0",
+    "valid-url": "^1.0.9"
+  }
+}

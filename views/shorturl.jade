@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	.container
+		section.title-row
+			h1 URL Shortener Microservice
+		section.stories-row
+			h3 User Stories:
+			ol.stories-ul
+				li.stories-li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+				li.stories-li If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+				li.stories-li When I visit that shortened URL, it will redirect me to my original link.
+		section.example-sect
+			h3 Create a New Shortened URL Example Usage:
+			ul.example-ul
+				li https://localhost:3000/api/shorten/http://google.com
+			h3 Create a New Shortened URL Example Output:
+			ul.output-ul
+				li
+					code {"original_url": "http://google.com", "shortened_url": "localhost:3000/api/shortened/4312"}
+			h3 Visiting a Shortened URL:
+			ul.example-ul
+				li localhost:3000/api/shortened/4312
+			h3 Redirects To:
+			ul.output-ul
+				li http://google.com
