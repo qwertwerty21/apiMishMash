@@ -6,7 +6,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const mongoURL = process.env.MONGO_URL;
+const mongoURL = "mongodb://sunnyshorturl:shorturl@ds163758.mlab.com:63758/shorturl";
 const routes = require('./routes/index');
 // const users = require('./routes/users');
 
